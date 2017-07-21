@@ -149,8 +149,8 @@ public class MainActivity extends FragmentActivity {
 
     protected void  resetTextview(){
         initview();
-        chat.setTextColor(Color.rgb(1,1,1));
-        contact.setTextColor(Color.rgb(1,1,1));
-        moments.setTextColor(Color.rgb(1,1,1));
+        chat.setTextColor(Color.BLACK);
+        contact.setTextColor(Color.BLACK);
+        moments.setTextColor(Color.BLACK);
     }
 }
