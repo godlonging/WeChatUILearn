@@ -6,13 +6,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.Menu;
 import android.view.ViewGroup;
+
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.jauker.widget.BadgeView;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,13 +45,16 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         initlines();
         initfragment();
         initview();
+    }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
     }
 
     private void initlines() {
@@ -143,9 +147,21 @@ public class MainActivity extends FragmentActivity {
         linearLayout=(LinearLayout) findViewById(R.id.ll);
     }
 
-
-
-
+    @Override
+    public boolean onMenuOpened(int featureId, Menu menu) {
+       if (featureId== Window.FEATURE_ACTION_BAR&&menu!=null){
+           if (menu.getClass().getSimpleName().equals("MenuBuilder")){
+               try {
+                   Method method=menu.getClass().getDeclaredMethod("setOptionalIconsVisble",Boolean.TYPE);
+                   method.setAccessible(true);
+                   method.invoke(menu,true);
+               }catch (Exception e){
+                    System.out.println("fail");
+               }
+           }
+       }
+        return super.onMenuOpened(featureId, menu);
+    }
 
     protected void  resetTextview(){
         initview();
