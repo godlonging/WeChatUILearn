@@ -23,6 +23,14 @@
         android:id="@+id/menu_contact"
         android:icon="@drawable/menu_feedback_icon"
         android:title="@string/menu_contact"/>
+    <item
+        android:id="@+id/my_QRcode"
+        android:icon="@drawable/men_scan_icon"
+        android:title="QRcode"/>
+    <item
+        android:icon="@drawable/men_scan_icon"
+        android:id="@+id/scan"
+        android:title="scaner"/>
 
 
 </menu>

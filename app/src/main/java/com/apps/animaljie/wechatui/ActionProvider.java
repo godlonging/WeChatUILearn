@@ -1,6 +1,7 @@
 package com.apps.animaljie.wechatui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
@@ -30,6 +31,9 @@ public class ActionProvider extends android.view.ActionProvider{
         subMenu.add("扫一扫").setIcon(R.drawable.men_scan_icon).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
+                Intent intent=new Intent();
+                
+
                 return true;
             }
         });
