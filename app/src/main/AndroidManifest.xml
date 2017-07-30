@@ -20,8 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MyQRcodeAcitivity"></activity>
-        <activity android:name=".MyQRcodeResult" ></activity>
-    <activity android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"></activity>
+        <activity android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"></activity>
     </application>
 
 </manifest>

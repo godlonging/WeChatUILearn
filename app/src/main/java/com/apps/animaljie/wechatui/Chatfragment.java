@@ -25,13 +25,22 @@ import java.util.ListIterator;
 
 
 public class Chatfragment extends android.support.v4.app.Fragment {
+    ;
 
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.tab1,container,false);
-
+        //return inflater.inflate(R.layout.tab1, container, false);
+        List<Itembean> itembeanList=new ArrayList<>();
+        for (int i=0;i<20;i++){
+            itembeanList.add(new Itembean(R.mipmap.image,"联系人"+i,"你有"+i+"条新消息","2017-7-"+(i+1)));
+        }
+        View view=inflater.inflate(R.layout.tab1,null);
+        ListView listView= (ListView) view.findViewById(R.id.lv_tab1);
+        listView.setAdapter(new MyBaseAdapter(getActivity(),itembeanList));
+        return view;
     }
+
 }
 
 

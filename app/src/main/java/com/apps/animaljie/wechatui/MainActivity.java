@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,6 +61,7 @@ public class MainActivity extends FragmentActivity {
         initlines();
         initfragment();
         initview();
+
     }
 
     @Override
@@ -196,6 +198,7 @@ public class MainActivity extends FragmentActivity {
         });
 
     }
+
 
     private void initview() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
