@@ -33,7 +33,7 @@ public class Chatfragment extends android.support.v4.app.Fragment {
         //return inflater.inflate(R.layout.tab1, container, false);
         List<Itembean> itembeanList=new ArrayList<>();
         for (int i=0;i<20;i++){
-            itembeanList.add(new Itembean(R.mipmap.image,"联系人"+i,"你有"+i+"条新消息","2017-7-"+(i+1)));
+            itembeanList.add(new Itembean(R.mipmap.image,"联系人"+i,"2017-7-"+(i+1),"你有"+i+"条新消息"));
         }
         View view=inflater.inflate(R.layout.tab1,null);
         ListView listView= (ListView) view.findViewById(R.id.lv_tab1);
