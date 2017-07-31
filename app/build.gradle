@@ -31,6 +31,26 @@ dependencies {
     compile project(':BadgeView')
     compile 'com.android.support:support-v4:26.0.0-alpha1'
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile'com.scwang.smartrefresh:SmartRefreshLayout:1.0.2-alpha-5'
+    compile'com.scwang.smartrefresh:SmartRefreshHeader:1.0.2-alpha-5'
     compile 'com.google.zxing:core:3.2.1'
     compile'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+
+}
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.0'
+            }
+        }
+    }
+}
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
 }

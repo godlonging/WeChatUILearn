@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WeChatUI</string>
+    <string name="app_name">微信</string>
     <string name="action_search">Search</string>
     <string name="action_add">Add</string>
     <string name="menu_contact">Contact</string>
