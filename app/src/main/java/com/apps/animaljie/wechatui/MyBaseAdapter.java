@@ -1,6 +1,7 @@
 package com.apps.animaljie.wechatui;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,10 +20,12 @@ public class MyBaseAdapter extends BaseAdapter {
     private List<Itembean> mlist;
     //先要创建layoutinflate对象，才能使用inflate方法
     private LayoutInflater inflater;
-    public  MyBaseAdapter(Context context,List<Itembean> list){
-        mlist=list;
-        inflater=LayoutInflater.from(context);
-    }
+
+
+     public  MyBaseAdapter(Context context,List<Itembean> list){
+             mlist=list;
+             inflater=LayoutInflater.from(context);
+         }
     @Override
     public int getCount() {
         return mlist.size();

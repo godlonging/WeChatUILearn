@@ -35,6 +35,10 @@ dependencies {
     compile'com.scwang.smartrefresh:SmartRefreshHeader:1.0.2-alpha-5'
     compile 'com.google.zxing:core:3.2.1'
     compile'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+    compile 'com.nhaarman.listviewanimations:lib-core:3.1.0@aar'
+    compile 'com.nhaarman.listviewanimations:lib-manipulation:3.1.0@aar'
+    compile 'com.nhaarman.listviewanimations:lib-core-slh:3.1.0@aar'
+
 
 }
 configurations.all {
@@ -53,4 +57,7 @@ allprojects {
             options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
         }
     }
+}
+repositories {
+    mavenCentral()
 }
