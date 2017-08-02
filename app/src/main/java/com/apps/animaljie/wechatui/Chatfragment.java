@@ -58,8 +58,9 @@ public class Chatfragment extends android.support.v4.app.Fragment {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
                 itembeanList.add(0,new Itembean(R.mipmap.icon,"新联系人","2017-7-31","新朋友"));
-                baseAdapter.notifyDataSetChanged();
                 refreshlayout.finishRefresh();
+                baseAdapter.notifyDataSetChanged();
+
             }
         });
         refreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
@@ -68,6 +69,7 @@ public class Chatfragment extends android.support.v4.app.Fragment {
                 itembeanList.add(new Itembean(R.mipmap.icon,"新联系人","2017-7-31","新朋友"));
                 baseAdapter.notifyDataSetChanged();
                 refreshlayout.finishLoadmore(10);
+
             }
         });
 

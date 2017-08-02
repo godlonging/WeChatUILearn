@@ -31,15 +31,14 @@ dependencies {
     compile project(':BadgeView')
     compile 'com.android.support:support-v4:26.0.0-alpha1'
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
-    compile'com.scwang.smartrefresh:SmartRefreshLayout:1.0.2-alpha-5'
-    compile'com.scwang.smartrefresh:SmartRefreshHeader:1.0.2-alpha-5'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.2-alpha-5'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.2-alpha-5'
     compile 'com.google.zxing:core:3.2.1'
-    compile'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+    compile 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     compile 'com.nhaarman.listviewanimations:lib-core:3.1.0@aar'
     compile 'com.nhaarman.listviewanimations:lib-manipulation:3.1.0@aar'
     compile 'com.nhaarman.listviewanimations:lib-core-slh:3.1.0@aar'
-
-
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
 }
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->
